@@ -47,7 +47,19 @@ namespace Lab04_TicTacToe.Classes
 
             Use any and all pre-existing methods in this program to help construct the method logic. 
              */
+			
+
+			//If there is no winner, keep on playing
+			while (!CheckForWinner(Board))
+			{
+				Console.Clear();
+				Board.DisplayBoard();
+				NextPlayer().TakeTurn(Board);
+				SwitchPlayer();
+			}
+			Console.Clear();
 			Board.DisplayBoard();
+
 			return null;
 		}
 
@@ -86,9 +98,14 @@ namespace Lab04_TicTacToe.Classes
 
 				// TODO:  Determine a winner has been reached. 
 				// return true if a winner has been reached. 
-			
-			}
 
+				//Console.WriteLine($"first iteration strings: {a} {b} {c}");
+
+				if (a == b && b == c && a == c)
+				{
+					return true;
+				}
+			}
 			return false;
 		}
 
