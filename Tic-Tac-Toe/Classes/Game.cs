@@ -98,8 +98,6 @@ namespace Lab04_TicTacToe.Classes
 				// TODO:  Determine a winner has been reached. 
 				// return true if a winner has been reached. 
 
-				Console.WriteLine($"Numbers: {a} {b} {c}");
-
 				if (a == b && b == c)
 				{
 					return true;
