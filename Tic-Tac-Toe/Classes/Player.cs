@@ -53,19 +53,28 @@ namespace Lab04_TicTacToe.Classes
 	
 		public void TakeTurn(Board board)
 		{
-			IsTurn = true;
+			//start player's turn to false
+			IsTurn = false;
 
-			Console.WriteLine($"{Name} it is your turn");
+			Console.WriteLine($"{Name} with {Marker}, it is your turn");
 
-			Position position = GetPosition(board);
-
-			if (Int32.TryParse(board.GameBoard[position.Row, position.Column], out int _))
+			//preventing player from using the same spot on board
+			while (!IsTurn)
 			{
-				board.GameBoard[position.Row, position.Column] = Marker;
-			}
-			else
-			{
-				Console.WriteLine("This space is already occupied");
+				Position position = GetPosition(board);
+
+				if (Int32.TryParse(board.GameBoard[position.Row, position.Column], out int _))
+				{
+					board.GameBoard[position.Row, position.Column] = Marker;
+
+					//set player's turn back to true, to switch players
+					IsTurn = true;
+				}
+
+				else
+				{
+					Console.WriteLine("This space is already occupied");
+				}
 			}
 		}
 	}

@@ -3,22 +3,23 @@ using System;
 
 namespace Tic_Tac_Toe
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
+	class Program
+	{
+		static void Main(string[] args)
+		{
 			StartApp();
 		}
 
-		public static string StartApp()
+		public static void StartApp()
 		{
+
 			Console.WriteLine("Welcome To Tic Tac Toe! Wanna Play? (y/n): ");
 
-			string input = Console.ReadLine();
+			string input = Console.ReadLine().ToLower();
 
 			if (input == "y" || input == "yes")
 			{
-				Console.WriteLine("Player 1 name: ");
+				Console.WriteLine("Player 1 (X) name: ");
 				string playerOneInput = Console.ReadLine();
 				Console.WriteLine($"{playerOneInput} you have X's ");
 
@@ -26,35 +27,32 @@ namespace Tic_Tac_Toe
 				{
 					Name = playerOneInput,
 					Marker = "X",
-					IsTurn = true,
 				};
 
-				Console.WriteLine("Player 2 name: ");
+				Console.WriteLine("Player 2 (O) name: ");
 				string playerTwoInput = Console.ReadLine();
-				Console.WriteLine($"{playerTwoInput} you have O's ");
 
 				Player playerTwo = new Player
 				{
 					Name = playerTwoInput,
 					Marker = "O",
-					IsTurn = true,
 				};
 
 				Game game = new Game(playerOne, playerTwo);
 
 				game.Play();
 
-			} else if (input == "n" || input == "no")
+			}
+			else if (input == "n" || input == "no")
 			{
+				Console.WriteLine("Ok! Come again!");
 				Environment.Exit(0);
-
-			} else
+			}
+			else
 			{
 				Console.Clear();
 				StartApp();
 			}
-
-		return "";
 		}
-    }
+	}
 }
