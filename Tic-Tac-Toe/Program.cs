@@ -27,6 +27,7 @@ namespace Tic_Tac_Toe
 				{
 					Name = playerOneInput,
 					Marker = "X",
+					IsTurn = true
 				};
 
 				Console.WriteLine("Player 2 (O) name: ");
@@ -36,7 +37,8 @@ namespace Tic_Tac_Toe
 				{
 					Name = playerTwoInput,
 					Marker = "O",
-				};
+					IsTurn = true
+		};
 
 				Game game = new Game(playerOne, playerTwo);
 
