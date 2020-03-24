@@ -33,13 +33,10 @@ Then select and open ```Tic-Tac-Toe.sln```
 
 ### Visuals
 
-#### Application Start
-![Image 1]()
+#### Application
+![Image 1](./assets/start.png)
 #### Using the Application
-![Image 1]()
-#### Application End
-![Image 1]()
+![Image 1](./assets/end.png)
 
 ---
 
-### Change Log

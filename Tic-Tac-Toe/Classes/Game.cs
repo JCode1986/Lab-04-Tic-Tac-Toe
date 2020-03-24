@@ -50,15 +50,23 @@ namespace Lab04_TicTacToe.Classes
 
 
 			//If there is no winner, keep on playing
+			int i = 0;
+			string space = "\t\t\t\t\t\t\t";
 			while (!CheckForWinner(Board))
 			{
 				Console.Clear();
 				Board.DisplayBoard();
 				NextPlayer().TakeTurn(Board);
 				SwitchPlayer();
+				i++;
+				if (i == 9)
+				{
+					break;
+				}
 			}
 			Console.Clear();
 			Board.DisplayBoard();
+			Console.WriteLine($"\n{space}Game Over!");
 			return null;
 		}
 
@@ -129,10 +137,8 @@ namespace Lab04_TicTacToe.Classes
 			else
 			{
 				PlayerOne.IsTurn = true;
-				PlayerTwo.IsTurn = false;              
+				PlayerTwo.IsTurn = false;
 			}
 		}
-
-
 	}
 }
