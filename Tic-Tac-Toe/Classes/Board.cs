@@ -21,9 +21,11 @@ namespace Lab04_TicTacToe.Classes
 		/// </summary>
 		public void DisplayBoard()
 		{
-            //TODO: Output the board to the console
+			//TODO: Output the board to the console
+			string space = "\t\t\t\t\t\t\t";
             for (int i = 0; i < GameBoard.GetLength(0); i++)
             {
+				Console.Write(space);
                 for (int j = 0; j < GameBoard.GetLength(1); j++)
                 {
 					Console.Write($"|{GameBoard[i, j]}|");

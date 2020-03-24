@@ -12,17 +12,18 @@ namespace Tic_Tac_Toe
 
 		public static void StartApp()
 		{
+			string space = "\t\t\t\t\t";
 
-			Console.WriteLine("Welcome To Tic Tac Toe! Wanna Play? (y/n): ");
+			Console.Write($"\n{space}Welcome To Tic Tac Toe! Wanna Play? (y/n): ");
 
 			string input = Console.ReadLine().ToLower();
 
 			if (input == "y" || input == "yes")
 			{
-				Console.WriteLine("Player 1 (X) name: ");
+				Console.Write($"\n{space}Player 1 (X) name: ");
 				string playerOneInput = Console.ReadLine();
 
-				Console.WriteLine("Player 2 (O) name: ");
+				Console.Write($"\n{space}Player 2 (O) name: ");
 				string playerTwoInput = Console.ReadLine();
 
 				GetPlayers(playerOneInput, playerTwoInput);
@@ -30,7 +31,7 @@ namespace Tic_Tac_Toe
 			}
 			else if (input == "n" || input == "no")
 			{
-				Console.WriteLine("Ok! Come again!");
+				Console.WriteLine($"\n{space}Ok! Come again!");
 				Environment.Exit(0);
 			}
 			else
@@ -65,11 +66,11 @@ namespace Tic_Tac_Toe
 
 		public static void ContinuePlaying(Player p1, Player p2)
 		{
-			bool again = true;
+			string space = "\t\t\t\t\t";
 
-			while (again)
+			while (true)
 			{
-				Console.WriteLine("Would you like to play again? (y/n): ");
+				Console.Write($"\n{space}Would you like to play again? (y/n): ");
 				string input = Console.ReadLine().ToLower();
 
 				if (input == "y" || input == "yes")
@@ -80,8 +81,7 @@ namespace Tic_Tac_Toe
 				}
 				else if (input == "n" || input == "no")
 				{
-					Console.WriteLine("Ok! Come again!");
-					again = false;
+					Console.WriteLine($"\n{space}Ok! Come again!");
 					Environment.Exit(0);
 				}
 				else
