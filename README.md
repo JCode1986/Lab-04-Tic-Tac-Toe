@@ -35,10 +35,8 @@ Then select and open ```Tic-Tac-Toe.sln```
 ### Visuals
 
 #### Application
-* Start of the game
 ![Image 1](./assets/start.png)
 #### Using the Application
-* Pick between numbers 1 - 9 for your input
 ![Image 1](./assets/end.png)
 
 ---
