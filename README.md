@@ -12,6 +12,7 @@ Version: 1.00
 * This is a C# console application that allows two players to play tic tac toe.
 * Each player will be given a turn, pick between 1 and 9 to place your marker (X or O) on the board.
 * A player wins if 3 markers are of the same kind are placed horizontally, vertically, or diagonally.
+
 ---
 
 ### Getting Started

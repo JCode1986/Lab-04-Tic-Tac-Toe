@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using Lab04_TicTacToe.Classes;
 
 namespace TicTacToeTest
 {
@@ -52,23 +53,22 @@ namespace TicTacToeTest
 
             string[,] testBoard = new string[,]
             {
-                {"X", "2", "3"},
-                {"X", "5", "6"},
-                {"X", "8", "9"},
+                {"O", "X", "O"},
+                {"4", "5", "6"},
+                {"7", "8", "9"},
             };
 
             board.GameBoard = testBoard;
 
             bool win = game.CheckForWinner(board);
 
-            Assert.True(win);
+            Assert.False(win);
         }
 
         [Fact]
         public void PlayerTurn()
         {
-            Game game = new Game(playerOne, playerTwo);
-            
+            Assert.False(object.ReferenceEquals(playerOne, playerTwo));
         }
     }
 }

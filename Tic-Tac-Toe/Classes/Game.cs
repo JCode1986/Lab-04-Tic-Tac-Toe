@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Lab04_TicTacToe.Classes
 {
-	class Game
+	public class Game
 	{
 		public Player PlayerOne { get; set; }
 		public Player PlayerTwo { get; set; }
@@ -52,17 +52,13 @@ namespace Lab04_TicTacToe.Classes
 			//If there is no winner, keep on playing
 			int i = 0;
 			string space = "\t\t\t\t\t\t\t";
-			while (!CheckForWinner(Board))
+			while (!CheckForWinner(Board) && i < 9)
 			{
 				Console.Clear();
 				Board.DisplayBoard();
 				NextPlayer().TakeTurn(Board);
 				SwitchPlayer();
 				i++;
-				if (i == 9)
-				{
-					break;
-				}
 			}
 			Console.Clear();
 			Board.DisplayBoard();
