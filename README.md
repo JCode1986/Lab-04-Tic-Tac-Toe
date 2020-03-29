@@ -9,8 +9,10 @@ Version: 1.00
 ----
 
 ## Description
-This is a C# console application that allows two players to play tic tac toe.
-
+* This is a C# console application that allows two players to play tic tac toe.
+* Enter number from 1-9 to mark a spot on the board.
+* Player cannot place marker on board that has already been marked.
+* Player wins when 3 markers ('X' or 'O') are placed row horizontally, diagonally, or vertically.
 ---
 
 ### Getting Started
